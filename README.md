@@ -2,7 +2,7 @@
 
 An interactive D3.js data visualization that explores the performance of Premier League teams from 1993 to 2024. Users can dynamically filter teams and seasons to analyze trends in goals scored, goals conceded, points, and positions.
 
-![Premier League Analysis](https://img.shields.io/badge/D3.js-v7-orange)
+![Premier League Analysis](https://premier-league-performance.vercel.app/)
 
 ---
 

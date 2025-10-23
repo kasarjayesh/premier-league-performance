@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Premier League Performance Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Premier League Performance Analysis (1993-2024)</h1>
+        
+        <!-- Description Section -->
+        <div class="description">
+            <h3>How to Use This Visualization</h3>
+            <p>Explore team performances using these filters:
+                <ul>
+                    <li><strong>Season:</strong> Select a specific year or "All Seasons"</li>
+                    <li><strong>Team:</strong> Focus on a specific club</li>
+                    <li><strong>Ranges:</strong> Set min/max values for Goals, Position, and Points</li>
+                </ul>
+                <strong>Bubble Size = Total Points</strong> | <strong>Color = League Position</strong> (Darker = Higher Rank)
+            </p>
+            <p class="data-source">Data Source: Premier League Historical Data</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <div class="filter-row">
+                <label>Season:
+                    <select id="seasonSelect">
+                        <option value="all">All Seasons</option>
+                    </select>
+                </label>
+                <label>Team:
+                    <select id="teamSelect">
+                        <option value="all">All Teams</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="filter-row">
+                <label>Goals Scored Range:
+                    <input type="number" id="minGoals" placeholder="Min" min="0">
+                    <input type="number" id="maxGoals" placeholder="Max" min="0">
+                </label>
+            </div>
+
+            <div class="filter-row">
+                <label>Position Range:
+                    <input type="number" id="minPosition" placeholder="Min" min="1" max="20">
+                    <input type="number" id="maxPosition" placeholder="Max" min="1" max="20">
+                </label>
+            </div>
+
+            <div class="filter-row">
+                <label>Points Range:
+                    <input type="number" id="minPoints" placeholder="Min" min="0">
+                    <input type="number" id="maxPoints" placeholder="Max" min="0">
+                </label>
+            </div>
+        </div>
+
+        <!-- Visualization Container -->
+        <div id="viz"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
